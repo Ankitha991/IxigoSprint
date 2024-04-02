@@ -6,8 +6,8 @@
       <class name="Runner2.Runner4">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="2"/>
           <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="1"/>
         </methods>
       </class> <!-- Runner2.Runner4 -->
     </classes>
