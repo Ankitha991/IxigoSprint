@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="StepDefinitions.HomePage">
+      <class name="Runner2.Runner4">
         <methods>
-          <include name="i_click_on_book_visa"/>
-          <include name="i_click_on_group_booking"/>
-          <include name="i_click_on_more"/>
-          <include name="i_click_on_plan"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="2"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- StepDefinitions.HomePage -->
+      </class> <!-- Runner2.Runner4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

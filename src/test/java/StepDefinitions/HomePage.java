@@ -5,12 +5,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -30,16 +32,22 @@ public class HomePage {
 		driver.manage().window().maximize();
 		driver.get("https://www.ixigo.com/");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 250)");
+		js.executeScript("window.scrollBy(0, 550)");
 	}
 
 	@When("I click on more")
 	public void i_click_on_more() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
 	    //throw new io.cucumber.java.PendingException();
-		
+		  Thread.sleep(4000);
 		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		  WebElement more =wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='More']")));
+		  WebElement more =wait.until(ExpectedConditions.elementToBeClickable
+				 (By.xpath("//p[text()='More']")));
+		  
+		  Point p = more.getLocation(); 
+		  JavascriptExecutor jse = (JavascriptExecutor) driver;
+		  jse.executeScript("arguments[0].scrollIntoViewIfNeeded()", more);
+		  more.click();
 		
 		/*
 		 * driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS); WebElement
@@ -47,8 +55,8 @@ public class HomePage {
 		 */
 		// driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		  
-		  Actions action = new Actions(driver);
-		  action.moveToElement(more).build().perform();
+//		  Actions action = new Actions(driver);
+//		  action.moveToElement(more).moveByOffset(p.x, p.y).click().build().perform();
 
 	}
 

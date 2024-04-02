@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="40.987" tests="4" skipped="0" failures="0" errors="0">
+<testcase classname="More in Ixigo Website" name="Plan in More" time="11.027">
+<system-out><![CDATA[
+Given I am on the Ixigo Website.............................................passed
+When I click on more........................................................passed
+And I click on Plan.........................................................passed
+Then it will redirect to the plan page......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="More in Ixigo Website" name="Group Booking in More" time="10.956">
+<system-out><![CDATA[
+Given I am on the Ixigo Website.............................................passed
+When I click on more........................................................passed
+And I click on Group Booking................................................passed
+Then it will redirect to the group booking page.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="More in Ixigo Website" name="Book Visa in More" time="11.056">
+<system-out><![CDATA[
+Given I am on the Ixigo Website.............................................passed
+When I click on more........................................................passed
+And I click on Book Visa....................................................passed
+Then it will redirect to the Book Visa Page.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="More in Ixigo Website" name="Customer Service Page" time="7.804">
+<system-out><![CDATA[
+Given I am on the Ixigo Website.............................................passed
+When I click on Customer Service............................................passed
+Then it will redirect to the Customer Service Page..........................passed
+]]></system-out>
+</testcase>
+</testsuite>
