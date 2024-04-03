@@ -12,9 +12,8 @@ public class Plan {
 	{
 		PageFactory.initElements(driver, this);
 	}
-	public void clickOnPlan() throws InterruptedException {
+	public void clickOnPlan() {
         planElement.click();
-        Thread.sleep(3000);
     }
 
 }

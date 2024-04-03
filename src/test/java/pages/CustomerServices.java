@@ -12,8 +12,7 @@ public class CustomerServices {
 		{
 			PageFactory.initElements(driver, this);
 		}
-	 public void clickOnCustomerServices() throws InterruptedException {
+	 public void clickOnCustomerServices() {
 	        customerServiceElement.click();
-	        Thread.sleep(3000);
 	    }
 }

@@ -12,8 +12,7 @@ public class BookVisa {
 	{
 		PageFactory.initElements(driver, this);
 	}
-	 public void clickOnBookVisa() throws InterruptedException {
+	 public void clickOnBookVisa() {
 	        bookVisaElement.click();
-	        Thread.sleep(3000);
 	    }
 }

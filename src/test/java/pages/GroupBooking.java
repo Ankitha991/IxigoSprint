@@ -12,8 +12,7 @@ public class GroupBooking {
 		{
 			PageFactory.initElements(driver, this);
 		}
-	 public void clickOnGroupBooking() throws InterruptedException {
+	 public void clickOnGroupBooking() {
 	        groupBookingElement.click();
-	        Thread.sleep(3000);
 	    }
 }
